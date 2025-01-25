@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { lusitana } from '@/app/ui/fonts'
+import { lusitana } from '@/ui/shared/font'
 import Search from '@/ui/shared/search'
 import { CustomersTableType, FormattedCustomersTable } from '@/lib/definitions'
 
