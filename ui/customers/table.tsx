@@ -1,15 +1,12 @@
-import Image from 'next/image';
-import { lusitana } from '@/app/ui/fonts';
-import Search from '@/app/ui/search';
-import {
-  CustomersTableType,
-  FormattedCustomersTable,
-} from '@/app/lib/definitions';
+import Image from 'next/image'
+import { lusitana } from '@/app/ui/fonts'
+import Search from '@/ui/shared/search'
+import { CustomersTableType, FormattedCustomersTable } from '@/lib/definitions'
 
 export default async function CustomersTable({
   customers,
 }: {
-  customers: FormattedCustomersTable[];
+  customers: FormattedCustomersTable[]
 }) {
   return (
     <div className="w-full">
@@ -22,7 +19,7 @@ export default async function CustomersTable({
           <div className="inline-block min-w-full align-middle">
             <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
               <div className="md:hidden">
-                {customers?.map((customer) => (
+                {customers?.map(customer => (
                   <div
                     key={customer.id}
                     className="mb-2 w-full rounded-md bg-white p-4"
@@ -65,27 +62,45 @@ export default async function CustomersTable({
               <table className="hidden min-w-full rounded-md text-gray-900 md:table">
                 <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
                   <tr>
-                    <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+                    <th
+                      scope="col"
+                      className="px-4 py-5 font-medium sm:pl-6"
+                    >
                       Name
                     </th>
-                    <th scope="col" className="px-3 py-5 font-medium">
+                    <th
+                      scope="col"
+                      className="px-3 py-5 font-medium"
+                    >
                       Email
                     </th>
-                    <th scope="col" className="px-3 py-5 font-medium">
+                    <th
+                      scope="col"
+                      className="px-3 py-5 font-medium"
+                    >
                       Total Invoices
                     </th>
-                    <th scope="col" className="px-3 py-5 font-medium">
+                    <th
+                      scope="col"
+                      className="px-3 py-5 font-medium"
+                    >
                       Total Pending
                     </th>
-                    <th scope="col" className="px-4 py-5 font-medium">
+                    <th
+                      scope="col"
+                      className="px-4 py-5 font-medium"
+                    >
                       Total Paid
                     </th>
                   </tr>
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 text-gray-900">
-                  {customers.map((customer) => (
-                    <tr key={customer.id} className="group">
+                  {customers.map(customer => (
+                    <tr
+                      key={customer.id}
+                      className="group"
+                    >
                       <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
                         <div className="flex items-center gap-3">
                           <Image
@@ -119,5 +134,5 @@ export default async function CustomersTable({
         </div>
       </div>
     </div>
-  );
+  )
 }

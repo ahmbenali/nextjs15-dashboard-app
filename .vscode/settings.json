@@ -1,0 +1,27 @@
+{
+  "tailwindCSS.experimental.configFile": "./tailwind.config.ts",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "README.md": true,
+    "public": true,
+    ".gitignore": true,
+    "bun.lockb": true,
+    "next-env.d.ts": true,
+    "next.config.ts": true,
+    "pnpm-lock.yaml": true,
+    "postcss.config.js": true,
+    "tailwind.config.ts": true,
+    "tsconfig.json": true,
+    "node_modules": true,
+    ".prettierrc": true,
+    ".vscode": true,
+    ".next": true
+  },
+  "hide-files.files": ["node_modules", ".prettierrc", ".vscode", ".next"],
+  "cSpell.ignoreWords": ["turbopack"]
+}
